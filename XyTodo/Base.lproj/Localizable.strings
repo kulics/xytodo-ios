@@ -1,0 +1,125 @@
+"app_name"="XyTodo";
+"app_slogan"="Make life simple";
+
+"about_open_source_license"="Open Source License";
+"about_developer"="Developer: Kulics Wu";
+"about_version"="Version: v 1.0";
+"about_official_website"="Official Website";
+
+"note"="Note";
+"search_name"="Search";
+"all"="All";
+"name"="Name";
+"content"="Content";
+"fingerprint"="Fingerprint";
+
+"column_fingerprint"="Fingerprint";
+"column_fingerprint_sub"="Set a master password to use fingerprint features";
+"column_format_export"="Format Export";
+"column_format_export_sub"="Use the format to export your decrypted origin data, you can import it on other compatible app.";
+"column_format_import"="Format Import";
+"column_format_import_sub"="Use the format data import origin data, you can import data from other compatible app.";
+
+"action_set"="Set to";
+
+"button_ok"="OK";
+"button_cancel"="Cancel";
+"button_set"="Set";
+"button_clear"="Clear";
+"button_reset"="Reset";
+"button_search"="Search";
+"button_save"="Save";
+"button_add"="Add";
+"button_delete"="Delete";
+"button_use"="Use";
+"button_copy"="Copy";
+"button_send"="Send";
+"button_restore"="Restore";
+"button_change"="Change";
+"button_color"="Color";
+"button_import"="Import";
+"button_export"="Export";
+"button_menu"="Menu";
+
+"dialog_title_confirm"="Confirm to save change";
+"dialog_title_enter"="Enter";
+"dialog_title_filter"="Search the category";
+"dialog_title_clear_data"="Confirm to clear data";
+
+"tips_fingerprint"="You need to use the Set button to save the master password on the local storage to use fingerprint features, prudent use in Root phone. Touch fingerprint on this page will display the master password.";
+"tips_export"="You can export this format data as a text.";
+"tips_import"="You just copy the format data to here then click on Import.";
+
+"dialog_content_clear_data"="You will lose all data.";
+
+"err_name_none"="The name can not be empty !";
+
+"toast_copy"="Has been copied to the clipboard~";
+"toast_err_type"="Data type error, please use the correct source data !";
+"toast_success_restore"="Restore success~";
+"toast_success_auth"="Auth succeeded";
+"toast_err_auth"="Auth failed";
+"toast_quit"="Click again to quit XyTodo";
+"toast_fast_click"="Do not click me so hard,Please!~ ";
+
+"page_title_main"="XyTodo";
+"page_title_search"="Search";
+"page_title_about_app"="About XyTodo";
+"page_title_about_license"="Open Source License";
+"page_title_guide"="Guide";
+"page_title_contact_us"="Contact Us";
+"page_title_settings"="Settings";
+"page_title_category"="Category";
+"page_title_fingerprint"="Fingerprint";
+"page_title_format_export"="Format Export";
+"page_title_format_import"="Format Import";
+
+"menu_settings"="Settings";
+"menu_backup"="Backup";
+"menu_restore"="Restore";
+"menu_search"="Search";
+"menu_add"="Add";
+"menu_delete"="Delete";
+"menu_palette"="Palette";
+"menu_filter"="Filter";
+"menu_about"="About";
+"menu_guide"="Guide";
+"menu_contact_us"="Contact Us";
+"menu_more"="More Info";
+"menu_function"="Function";
+
+
+"bs_more"="More";
+"column_clear_data"="Clear Data";
+"column_clear_data_sub"="Clear all data of the app";
+"page_title_task_add"="Add Task";
+"page_title_task_edit"="Edit Task";
+"button_palette"="Palette";
+"dialog_title_palette"="Set color";
+"dialog_title_delete"="Confirm to delete";
+"dialog_content_delete"="You will lose this task.";
+"page_title_note"="Note";
+"today"="Today";
+"todo"="Todo";
+"done"="Done";
+"yesterday"="Yesterday";
+"tomorrow"="Tomorrow";
+"next_week"="Next Week";
+"custom"="Custom";
+"target"="Target";
+"about_website"="https://kulicswu.wixsite.com/naxy";
+
+"longstr_guide"="
+1. The purpose of the XyTodo\n
+1.1 XyTodo has been designed to manage your to-do list, and as an open source software, it provides a case for beginners to learn application development. Source code, please refer to Github.\n
+2. The data of XyTodo\n
+2.1 XyTodo has not yet supported synchronization, and this feature will be added in future releases.\n
+";
+
+"longstr_contact_us"="
+We very glad that you have experienced XyTodo, if you encounter any problems in the use of welcome you to contact us at any time.\n
+Now you can send an email to 'kulics@naxy.me', or view our twitter 'https://twitter.com/KulicsWu'  to get in touch with us, we will listen to you and help you solve the problem.\n
+XyTodo very much need your valuable advice to support our improvement, I hope XyTodo can grow up with you, to become one of your most powerful tool.\n
+";
+
+

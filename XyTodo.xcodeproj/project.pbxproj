@@ -18,6 +18,14 @@
 		A42DCECB1F316E8D006A987F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42DCEC91F316E8D006A987F /* LaunchScreen.storyboard */; };
 		A42DCED31F316EE4006A987F /* ViewControllerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42DCED21F316EE4006A987F /* ViewControllerMain.swift */; };
 		A431F8FB1F31741200C140DB /* TableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A431F8FA1F31741200C140DB /* TableTask.swift */; };
+		A44BCE171F31CB760087479F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A44BCE191F31CB760087479F /* Localizable.strings */; };
+		A44BCE231F31D3190087479F /* ViewControllerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BCE1E1F31D3190087479F /* ViewControllerMenu.swift */; };
+		A44BCE241F31D3190087479F /* ViewControllerSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BCE1F1F31D3190087479F /* ViewControllerSetting.swift */; };
+		A44BCE251F31D3190087479F /* ViewControllerGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BCE201F31D3190087479F /* ViewControllerGuide.swift */; };
+		A44BCE261F31D3190087479F /* ViewControllerContactUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BCE211F31D3190087479F /* ViewControllerContactUs.swift */; };
+		A44BCE271F31D3190087479F /* ViewControllerAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BCE221F31D3190087479F /* ViewControllerAbout.swift */; };
+		A44BCE291F31D3770087479F /* TableViewCellColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BCE281F31D3770087479F /* TableViewCellColumn.swift */; };
+		A44BCE2B1F31D4970087479F /* TableViewCellTextview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BCE2A1F31D4970087479F /* TableViewCellTextview.swift */; };
 		A4842DDC1F3171D600F46C22 /* ModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4842DDB1F3171D600F46C22 /* ModelBase.swift */; };
 		A48617061F3172AB00A3E0B0 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48617051F3172AB00A3E0B0 /* SQLiteDB.swift */; };
 		A48617091F31733C00A3E0B0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A48617081F31733C00A3E0B0 /* libsqlite3.tbd */; };
@@ -40,6 +48,18 @@
 		A42DCECC1F316E8D006A987F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A42DCED21F316EE4006A987F /* ViewControllerMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMain.swift; sourceTree = "<group>"; };
 		A431F8FA1F31741200C140DB /* TableTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableTask.swift; sourceTree = "<group>"; };
+		A44BCE181F31CB760087479F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A44BCE1A1F31CB8F0087479F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A44BCE1B1F31CB990087479F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A44BCE1C1F31CBA10087479F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A44BCE1D1F31CBAA0087479F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A44BCE1E1F31D3190087479F /* ViewControllerMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMenu.swift; sourceTree = "<group>"; };
+		A44BCE1F1F31D3190087479F /* ViewControllerSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSetting.swift; sourceTree = "<group>"; };
+		A44BCE201F31D3190087479F /* ViewControllerGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerGuide.swift; sourceTree = "<group>"; };
+		A44BCE211F31D3190087479F /* ViewControllerContactUs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerContactUs.swift; sourceTree = "<group>"; };
+		A44BCE221F31D3190087479F /* ViewControllerAbout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAbout.swift; sourceTree = "<group>"; };
+		A44BCE281F31D3770087479F /* TableViewCellColumn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellColumn.swift; sourceTree = "<group>"; };
+		A44BCE2A1F31D4970087479F /* TableViewCellTextview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellTextview.swift; sourceTree = "<group>"; };
 		A4842DDB1F3171D600F46C22 /* ModelBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelBase.swift; sourceTree = "<group>"; };
 		A48617051F3172AB00A3E0B0 /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
 		A48617081F31733C00A3E0B0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -86,6 +106,7 @@
 				A40F20981F31706B0071AB8D /* Layout */,
 				A42DCECC1F316E8D006A987F /* Info.plist */,
 				A42DCEC71F316E8D006A987F /* Assets.xcassets */,
+				A44BCE191F31CB760087479F /* Localizable.strings */,
 			);
 			name = Res;
 			sourceTree = "<group>";
@@ -125,6 +146,8 @@
 		A40F209B1F3170970071AB8D /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				A44BCE281F31D3770087479F /* TableViewCellColumn.swift */,
+				A44BCE2A1F31D4970087479F /* TableViewCellTextview.swift */,
 			);
 			name = Component;
 			sourceTree = "<group>";
@@ -132,6 +155,11 @@
 		A40F209C1F3170A00071AB8D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A44BCE1E1F31D3190087479F /* ViewControllerMenu.swift */,
+				A44BCE1F1F31D3190087479F /* ViewControllerSetting.swift */,
+				A44BCE201F31D3190087479F /* ViewControllerGuide.swift */,
+				A44BCE211F31D3190087479F /* ViewControllerContactUs.swift */,
+				A44BCE221F31D3190087479F /* ViewControllerAbout.swift */,
 				A42DCED21F316EE4006A987F /* ViewControllerMain.swift */,
 			);
 			name = ViewController;
@@ -228,6 +256,10 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
+				ja,
+				ru,
 			);
 			mainGroup = A42DCEB41F316E8D006A987F;
 			productRefGroup = A42DCEBE1F316E8D006A987F /* Products */;
@@ -245,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A42DCECB1F316E8D006A987F /* LaunchScreen.storyboard in Resources */,
+				A44BCE171F31CB760087479F /* Localizable.strings in Resources */,
 				A42DCEC81F316E8D006A987F /* Assets.xcassets in Resources */,
 				A42DCEC61F316E8D006A987F /* Main.storyboard in Resources */,
 			);
@@ -258,15 +291,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				A41B1A7A1F3172210055B783 /* ModelTask.swift in Sources */,
+				A44BCE251F31D3190087479F /* ViewControllerGuide.swift in Sources */,
 				A40F209F1F3171060071AB8D /* ToolConstant.swift in Sources */,
+				A44BCE291F31D3770087479F /* TableViewCellColumn.swift in Sources */,
 				A4F299261F31714C00A6E587 /* ToolFunction.swift in Sources */,
 				A42DCEC11F316E8D006A987F /* AppDelegate.swift in Sources */,
 				A42DCED31F316EE4006A987F /* ViewControllerMain.swift in Sources */,
 				A431F8FB1F31741200C140DB /* TableTask.swift in Sources */,
 				A486170F1F3173E900A3E0B0 /* TableBase.swift in Sources */,
+				A44BCE271F31D3190087479F /* ViewControllerAbout.swift in Sources */,
+				A44BCE261F31D3190087479F /* ViewControllerContactUs.swift in Sources */,
+				A44BCE231F31D3190087479F /* ViewControllerMenu.swift in Sources */,
 				A4C9395F1F3174A90079189D /* DBHelper.swift in Sources */,
+				A44BCE2B1F31D4970087479F /* TableViewCellTextview.swift in Sources */,
 				A4842DDC1F3171D600F46C22 /* ModelBase.swift in Sources */,
 				A48617061F3172AB00A3E0B0 /* SQLiteDB.swift in Sources */,
+				A44BCE241F31D3190087479F /* ViewControllerSetting.swift in Sources */,
 				A42CD3821F31752C005EFC16 /* DBManager.swift in Sources */,
 				A42CD3841F31958A005EFC16 /* ModelTaskSub.swift in Sources */,
 				A42CD3861F31A11B005EFC16 /* TableTaslSub.swift in Sources */,
@@ -292,6 +332,18 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		A44BCE191F31CB760087479F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A44BCE181F31CB760087479F /* Base */,
+				A44BCE1A1F31CB8F0087479F /* zh-Hans */,
+				A44BCE1B1F31CB990087479F /* zh-Hant */,
+				A44BCE1C1F31CBA10087479F /* ja */,
+				A44BCE1D1F31CBAA0087479F /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -299,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -350,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

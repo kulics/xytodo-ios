@@ -2,104 +2,51 @@ import UIKit
 
 class ViewControllerMain: UITableViewController
 {
+    @IBOutlet weak var mActionButton: UIBarButtonItem!
+    @IBOutlet weak var mMenuButton: UIBarButtonItem!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        self.navigationItem.title = NSLocalizedString("page_title_main",comment: "")
+        mActionButton.title = NSLocalizedString("button_add",comment: "")
+        mMenuButton.title = NSLocalizedString("button_menu",comment: "")
+        self.navigationController?.navigationBar.barTintColor = PURE_BLACK_500
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationController?.toolbar.tintColor = PURE_BLACK_500
+        //隐藏空白项
+        self.tableView.tableFooterView = UIView()
     }
-    
-    // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int
     {
-        // #warning Incomplete implementation, return the number of sections
         return 0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        // #warning Incomplete implementation, return the number of rows
         return 0
     }
-    
-    /*
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-     
-     // Configure the cell...
-     
-     return cell
-     }
-     */
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
     @IBAction func addAction(_ sender: Any)
     {
         //创建对话框
-        let alert = UIAlertController(title: "添加任务", message: "", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: NSLocalizedString("page_title_task_add",comment: ""), message: "", preferredStyle: UIAlertControllerStyle.alert)
         
         alert.addTextField (configurationHandler:
             {
                 textField -> Void in
-                textField.placeholder = "内容"
+                textField.placeholder = NSLocalizedString("content",comment: "")
         })
         //设置按钮
-        let positiveAction = UIAlertAction(title: "确认", style: UIAlertActionStyle.default, handler:
+        let positiveAction = UIAlertAction(title: NSLocalizedString("button_ok",comment: ""), style: UIAlertActionStyle.default, handler:
         {
             alertAction -> Void in
             print("ok")
         })
-        let negativeAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.cancel, handler: nil)
+        let negativeAction = UIAlertAction(title: NSLocalizedString("button_cancel",comment: ""), style: UIAlertActionStyle.cancel, handler: nil)
         //装载
         alert.addAction(positiveAction)
         alert.addAction(negativeAction)

@@ -1,0 +1,124 @@
+"app_name"="XyTodo";
+"app_slogan"="让生活更简单";
+
+"about_open_source_license"="开放源代码许可";
+"about_developer"="开发者:Kulics Wu";
+"about_version"="版本: v 1.0";
+"about_official_website"="官网";
+
+"note"="备注";
+"search_name"="搜索";
+"all"="所有";
+"name"="名称";
+"content"="内容";
+"fingerprint"="指纹";
+
+"column_fingerprint"="指纹";
+"column_fingerprint_sub"="设置主密码以使用指纹功能";
+"column_format_export"="格式化导出";
+"column_format_export_sub"="使用格式化导出已解密的原文，可在其它兼容app上还原数据";
+"column_format_import"="格式化导入";
+"column_format_import_sub"="使用格式化数据导入原文，可导入其它兼容app上的数据";
+
+"action_set"="更改为";
+
+"button_ok"="确认";
+"button_cancel"="取消";
+"button_set"="设置";
+"button_clear"="清空";
+"button_reset"="重置";
+"button_search"="查找";
+"button_save"="保存";
+"button_add"="添加";
+"button_delete"="删除";
+"button_use"="使用";
+"button_copy"="复制";
+"button_send"="发送";
+"button_restore"="还原";
+"button_change"="更改";
+"button_color"="颜色";
+"button_import"="导入";
+"button_export"="导出";
+"button_menu"="菜单";
+
+"dialog_title_confirm"="确认保存";
+"dialog_title_enter"="输入";
+"dialog_title_filter"="查询分类";
+"dialog_title_clear_data"="确认清空数据";
+
+"tips_fingerprint"="你需要使用设置按钮将主密码保存在本地才能使用指纹功能，谨慎在Root过的手机中使用。在此页面触摸指纹会显示已存储的主密码。";
+
+"dialog_content_clear_data"="你会失去所有的数据。";
+
+"err_name_none"="名称不能为空！";
+
+"toast_copy"="已拷贝至剪切板~";
+"toast_err_type"="数据类型错误，请使用正确的源数据！";
+"toast_success_restore"="还原成功~";
+"toast_success_auth"="识别成功";
+"toast_err_auth"="识别失败";
+
+"page_title_main"="XyTodo";
+"page_title_search"="搜索";
+"page_title_about_app"="关于 XyTodo";
+"page_title_about_license"="开放源代码许可";
+"page_title_guide"="指南";
+"page_title_contact_us"="联系我们";
+"page_title_settings"="设置";
+"page_title_category"="分类";
+"page_title_fingerprint"="指纹";
+"page_title_format_export"="格式化导出";
+"page_title_format_import"="格式化导入";
+
+"menu_settings"="设置";
+"menu_backup"="备份";
+"menu_restore"="还原";
+"menu_search"="查找";
+"menu_add"="添加";
+"menu_delete"="删除";
+"menu_palette"="调色";
+"menu_filter"="筛选";
+"menu_about"="关于";
+"menu_guide"="指南";
+"menu_contact_us"="联系我们";
+"menu_more"="更多信息";
+"menu_function"="功能";
+
+
+"bs_more"="更多";
+"tips_export"="你可以将格式化数据作为文字导出。";
+"tips_import"="你只需将格式化数据复制于此然后点击导入即可。";
+"column_clear_data"="清空数据";
+"column_clear_data_sub"="清空应用内所有数据";
+"page_title_task_add"="添加任务";
+"page_title_task_edit"="编辑任务";
+"button_palette"="调色";
+"dialog_title_palette"="设置颜色";
+"dialog_title_delete"="确认删除";
+"dialog_content_delete"="你将会失去这条任务。";
+"page_title_note"="备注";
+"toast_fast_click"="不要那么用力的点我啦！~ ";
+"toast_quit"="再按一次退出 XyTodo";
+"today"="今天";
+"todo"="待办";
+"done"="已完成";
+"yesterday"="昨天";
+"tomorrow"="明天";
+"next_week"="下一周";
+"custom"="自定义";
+"target"="目标";
+"about_website"="http://naxy.sxl.cn/";
+
+
+"longstr_guide"="
+1. XyTodo 的用途\n
+1.1 XyTodo 被设计用来记录管理您的待办事项，同时作为一个开源软件，提供初学者学习应用开发的案例，源码请从 Github 查阅。\n
+2. XyTodo 的数据\n
+2.1 XyTodo 暂时还未支持同步功能，这个功能将在未来的版本中加入。\n
+";
+
+"longstr_contact_us"="
+非常高兴您下载体验了 XyTodo，如果您在使用中碰到任何疑问欢迎您随时联系我们。\n
+现在可以通过加入 qq 群 220291338、 发送邮件至 'kulics@naxy.me'、 关注微博 'http://weibo.com/kulics' 与我们取得联系，我们会认真聆听您的意见和帮助您解决问题。\n
+XyTodo 非常需要您的宝贵意见支持我们改进，希望 XyTodo 能有您的陪伴一起成长，成为您最得力的工具之一。\n
+";

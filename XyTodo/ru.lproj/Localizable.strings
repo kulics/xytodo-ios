@@ -1,0 +1,125 @@
+"app_name"="XyTodo";
+"app_slogan"="сделать жизнь простых";
+
+"about_open_source_license"="Открытым исходным кодом лицензии";
+"about_developer"="Разработчик: Kulics Wu";
+"about_version"="Версия:  v 1.0";
+"about_official_website"="Официальный сайт";
+
+"note"="Примечание";
+"search_name"="Поиск";
+"all"="Все";
+"name"="Имя";
+"fingerprint"="отпечаток";
+
+"column_fingerprint"="отпечаток";
+"column_fingerprint_sub"="Набор в основном положить плотной кодирование с помощью функции отпечатков пальцев";
+
+"action_set"="Установите";
+
+"button_ok"="Хорошо";
+"button_cancel"="Отмена";
+"button_set"="Набор";
+"button_clear"="Ясно";
+"button_reset"="Сброс";
+"button_search"="Поиск";
+"button_save"="Сохранить";
+"button_add"="Добавить";
+"button_delete"="Удалить";
+"button_use"="Использование";
+"button_copy"="Копия";
+"button_send"="Отправить";
+"button_restore"="Восстановление";
+"button_change"="Изменения";
+"button_color"="Цвет";
+"button_menu"="меню";
+
+"dialog_title_confirm"="Подтвердите сохранение изменений";
+"dialog_title_enter"="Введите";
+"dialog_title_filter"="Поиск категории";
+"dialog_title_clear_data"="Подтвердите для очистки данных";
+
+"tips_fingerprint"="Вам нужно использовать кнопку Set для сохранения мастер-пароль на локальном хранилище для использования функций отпечатков пальцев, разумное использование в корень телефона. Касание отпечатков пальцев на этой странице будут отображаться мастер-пароль.";
+
+"dialog_content_clear_data"="Вы потеряете все данные.";
+
+"err_name_none"="Имя не может быть пустым!";
+
+"toast_copy"="Был скопирован в буфер обмена ~";
+"toast_err_type"="Данные типа ошибки, пожалуйста, используйте правильный источник данных!";
+"toast_success_restore"="Восстановить успех ~";
+"toast_success_auth"="Ошибка Успех";
+"toast_err_auth"="Ошибка аутентификации";
+
+"page_title_main"="XyTodo";
+"page_title_search"="Поиск";
+"page_title_about_app"="О XyTodo";
+"page_title_about_license"="Открытым исходным кодом лицензии";
+"page_title_guide"="Путеводитель";
+"page_title_contact_us"="Свяжитесь с нами";
+"page_title_settings"="Параметры";
+"page_title_category"="Категория";
+"page_title_fingerprint"="Отпечаток пальца";
+
+"menu_settings"="Параметры";
+"menu_backup"="Резервное копирование";
+"menu_restore"="Восстановление";
+"menu_search"="Поиск";
+"menu_add"="Добавьте";
+"menu_delete"="Удалить";
+"menu_palette"="Палитра";
+"menu_filter"="Фильтр";
+"menu_about"="О";
+"menu_guide"="Путеводитель";
+"menu_contact_us"="Свяжитесь с нами";
+"menu_more"="Более подробная информация";
+"menu_function"="Функция";
+
+
+"bs_more"="Даже многие";
+"page_title_format_import"="Формат импорта";
+"page_title_format_export"="Формат экспорта";
+"button_import"="Импорт";
+"button_export"="Экспорт";
+"content"="Содержание";
+"column_format_export"="Формат экспорта";
+"column_format_import"="Формат импорта";
+"column_format_export_sub"="Используйте формат для экспорта данных расшифрованной происхождения, вы можете импортировать его на другие совместимые приложения.";
+"column_format_import_sub"="Используйте формат данных импорта происхождения данных, вы можете импортировать данные из других совместимых приложений.";
+"tips_export"="Этот формат данных можно экспортировать в виде текста.";
+"tips_import"="Вы просто скопировать формат данных здесь, затем нажмите кнопку Импорт.";
+"column_clear_data"="Удалить данные";
+"column_clear_data_sub"="Очистить все данные приложения";
+"page_title_task_add"="Добавить задачу ";
+"page_title_task_edit"="Изменить задачу ";
+"button_palette"="Палитра";
+"dialog_title_palette"="Установить цвет";
+"dialog_title_delete"="Подтвердите удаление";
+"dialog_content_delete"="Вы потеряете  этой  задачи. ";
+"page_title_note"="Примечание";
+"toast_fast_click"="Не нажмите меня так сильно, пожалуйста! ~";
+"toast_quit"="Нажмите снова, чтобы выйти из XyTodo";
+"today"="Cегодня";
+"todo"="Делать";
+"done"="завершена ";
+"yesterday"="Вчера";
+"tomorrow"="Завтра";
+"next_week"="Следующая неделя";
+"custom"="Обычай";
+"target"="Цели";
+"about_website"="https://kulicswu.wixsite.com/naxy";
+
+
+
+"longstr_guide"="
+1. Цель XyTodo\n
+1.1 XyTodo был разработан для управления списком дел, а в качестве программного обеспечения с открытым исходным кодом он предоставляет возможность начинающим изучать разработку приложений. Исходный код, пожалуйста, обратитесь к Github.\n
+2. данные XyTodo\n
+2.1 XyTodo пока не поддерживает синхронизацию, и эта функция будет добавлена в будущих версиях.\n
+";
+
+"longstr_contact_us"="
+Очень рад, что вы испытали XyTodo, если у вас возникнут проблемы при использовании приглашаем Вас связаться с нами в любое время.\n
+Теперь вы можете отправить по электронной почте 'kulics@naxy.me', или просмотреть наши щебетать 'https://twitter.com/KulicsWu' связаться с нами, мы прислушиваемся к вам и помочь вам решить проблему.\n
+XyTodo очень нужны ваши ценные советы для улучшения нашей поддержки, я надеюсь, что XyTodo может вырасти с вами, чтобы стать одним из самых мощных инструментов.\n
+";
