@@ -5,7 +5,7 @@ class TableViewCellTask: UITableViewCell
     @IBOutlet weak var lbContent: UILabel!
     @IBOutlet weak var lbTime: UILabel!
     @IBOutlet weak var cbTag: VKCheckbox!
-    @IBOutlet weak var vCard: UIView!
+    @IBOutlet weak var vCard: CardView!
     
     override func awakeFromNib()
     {
@@ -14,7 +14,7 @@ class TableViewCellTask: UITableViewCell
         cbTag.bgColorSelected  = UIColor.white
         cbTag.borderColor      = UIColor.white
         cbTag.borderWidth      = 3
-        cbTag.cornerRadius     = 4
+        cbTag.cornerRadius     = 1
     }
 
     override func setSelected(_ selected: Bool, animated: Bool)

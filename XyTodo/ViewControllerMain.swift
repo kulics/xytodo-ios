@@ -48,13 +48,13 @@ class ViewControllerMain: UITableViewController, UIPopoverPresentationController
     //监听跳转
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-//        if segue.identifier == "showKeyView"
-//        {
-//            let indexPath:IndexPath = self.tableView!.indexPathForSelectedRow!
-//            let tempVC = segue.destination as! ViewControllerKeyView
-//            tempVC.mID = mSectionArray[(indexPath as NSIndexPath).section][(indexPath as NSIndexPath).row].id
-//            tempVC.delegate = self
-//        }
+        if segue.identifier == "showTaskEdit"
+        {
+            let indexPath:IndexPath = self.tableView!.indexPathForSelectedRow!
+            let tempVC = segue.destination as! ViewControllerTaskEdit
+            tempVC.mID = mDataset[(indexPath as NSIndexPath).row].id
+            tempVC.delegate = self
+        }
 //        if segue.identifier == "showKeyAdd"
 //        {
 //            let tempVC = segue.destination as! ViewControllerKeyAdd
@@ -94,14 +94,16 @@ class ViewControllerMain: UITableViewController, UIPopoverPresentationController
         }
         else
         {
-            cell.vCard.backgroundColor = PURE_BLUE_500
+            cell.vCard.backgroundColor = colorGet(color: item.color)
             cell.cbTag.color = PURE_GRAY_500
             cell.cbTag.setOn(on: false, animated: false)
             cell.lbContent.text = item.content
             cell.lbTime.text = ToolFunction.GetDateFromUTC(time: item.timeTarget)
         }
-        
-        cell.cbTag.checkboxClickBlock = { isOn in
+        //选择框设置点击监听
+        cell.cbTag.addAction(handler:
+        {
+            (isOn) in
             let b = isOn ? 1 : 0
             //必须先对当前状态做判断，因为每次装填都会触发事件，这里需要过滤
             if item.status != b {
@@ -110,9 +112,16 @@ class ViewControllerMain: UITableViewController, UIPopoverPresentationController
                 let time = Int(NSDate().timeIntervalSince1970)
                 item.timeDone = time
                 self.mApp.DBMGet().TaskCheck(model: item)
-                //UpdateTag()
                 tableView.reloadRows(at: [indexPath], with: .automatic)
+                tableView.reloadSections(IndexSet(integer: 0), with: .none)
             }
+        })
+        //背景设置点击监听
+        cell.vCard.ClickBlock = { () in
+            tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+            //使用segue跳转
+            self.performSegue(withIdentifier: "showTaskEdit", sender: self)
+            tableView.deselectRow(at: indexPath, animated: false)
         }
         return cell
     }
@@ -198,7 +207,7 @@ class ViewControllerMain: UITableViewController, UIPopoverPresentationController
         let alert = UIAlertController(title: NSLocalizedString("page_title_task_add",comment: ""), message: "", preferredStyle: UIAlertControllerStyle.alert)
         
         alert.addTextField (configurationHandler:
-            {
+        {
                 textField -> Void in
                 textField.placeholder = NSLocalizedString("content",comment: "")
         })
@@ -223,10 +232,11 @@ class ViewControllerMain: UITableViewController, UIPopoverPresentationController
                 let id = self.mApp.DBMGet().TaskAdd(model: model)
                 //必须向tableView的数据源数组中相应的添加一条数据
                 self.mDataset.insert(self.mApp.DBMGet().TaskGet(id: id), at: 0)
+                self.tableView.setContentOffset(CGPoint(x: 0,y: -64), animated: true)
                 self.tableView.beginUpdates()
-                self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+                self.tableView.reloadSections(IndexSet(integer: 0), with: .none)
+                self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .top)
                 self.tableView.endUpdates()
-                self.tableView.scrollsToTop = true
             }
         })
         let negativeAction = UIAlertAction(title: NSLocalizedString("button_cancel",comment: ""), style: UIAlertActionStyle.cancel, handler: nil)
@@ -286,7 +296,8 @@ class ViewControllerMain: UITableViewController, UIPopoverPresentationController
         return UIModalPresentationStyle.none
     }
     
-    func countGet() -> String {
+    func countGet() -> String
+    {
         var iCheckNum = 0;
         for item in mDataset
         {
@@ -296,6 +307,23 @@ class ViewControllerMain: UITableViewController, UIPopoverPresentationController
             }
         }
         return String(iCheckNum) + "/" + String(mDataset.count)
+    }
+    
+    func colorGet(color: String) -> UIColor
+    {
+        switch color
+        {
+            case "blue":
+                return PURE_BLUE_500
+            case "green":
+                return PURE_GREEN_500
+            case "yellow":
+                return PURE_YELLOW_500
+            case "red":
+                return PURE_RED_500
+            default:
+                return PURE_BLUE_500
+        }
     }
 }
 

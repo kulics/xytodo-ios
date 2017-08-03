@@ -59,7 +59,7 @@ class ViewControllerPopMenu: UITableViewController
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         //响应点击方法
-        self.actionPositive!(indexPath.row)
+        self.actionPositive?(indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
         //退出弹窗
         self.presentingViewController!.dismiss(animated: true, completion: nil)

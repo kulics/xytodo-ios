@@ -28,8 +28,6 @@ import UIKit
 
 typealias CheckboxValueChangedBlock = (_ isOn: Bool) -> Void
 
-typealias CheckboxClickBlock = (Bool) -> Void
-
 @objc enum VKCheckboxLine: Int
 {
     case Normal
@@ -38,7 +36,11 @@ typealias CheckboxClickBlock = (Bool) -> Void
 
 class VKCheckbox: UIView
 {
-    var checkboxClickBlock: CheckboxClickBlock?
+    //添加监听方法
+    var checkboxClickBlock: ((Bool) -> Void)?
+    func addAction(handler: @escaping (Bool) -> Void) {
+        checkboxClickBlock = handler
+    }
     // MARK: - Properties
     
     /**
@@ -239,7 +241,7 @@ extension VKCheckbox
     @objc func buttonDidSelected()
     {
         self.setOn(on: !self.on, animated: true)
-        checkboxClickBlock!(self.on)
+        checkboxClickBlock?(self.on)
     }
     
     func showCheckmark(show: Bool, animated: Bool)

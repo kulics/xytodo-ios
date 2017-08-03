@@ -90,7 +90,6 @@ class ViewControllerSetting: UITableViewController
                     self.mApp.DBMGet().DBClear()
                     self.delegate?.updateHome()
                     // 没有错误消息抛出
-//                    self.delegate?.changeKey()
                     _ = self.navigationController?.popViewController(animated: true)
                 }
                 let negativeAction = UIAlertAction(title: NSLocalizedString("button_cancel",comment: ""), style: UIAlertActionStyle.cancel, handler: nil)

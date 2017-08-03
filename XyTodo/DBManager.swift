@@ -134,7 +134,7 @@ class DBManager
         _ = db.execute(sql: TableTask.Update(id: model.id), parameters: params)
         
         //先删除后添加
-        _ = db.execute(sql: TableTaskSub.Delete(id: model.id))
+        _ = db.execute(sql: TableTaskSub.DeleteAll(id: model.id))
         //遍历添加自定义
         for item in model.sub
         {

@@ -11,7 +11,7 @@
 		A413F6FF1F32AE3D00E54A30 /* TableViewCellTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F6FE1F32AE3D00E54A30 /* TableViewCellTask.swift */; };
 		A413F7011F32B38400E54A30 /* VKCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F7001F32B38400E54A30 /* VKCheckbox.swift */; };
 		A413F7031F32D97C00E54A30 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F7021F32D97C00E54A30 /* CardView.swift */; };
-		A413F7051F32F95E00E54A30 /* VieControllerPopMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F7041F32F95E00E54A30 /* VieControllerPopMenu.swift */; };
+		A413F7051F32F95E00E54A30 /* ViewControllerPopMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F7041F32F95E00E54A30 /* ViewControllerPopMenu.swift */; };
 		A413F7071F32F98700E54A30 /* TableViewCellMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F7061F32F98700E54A30 /* TableViewCellMenu.swift */; };
 		A413F7091F33065C00E54A30 /* ViewControllerTaskAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F7081F33065C00E54A30 /* ViewControllerTaskAdd.swift */; };
 		A413F70B1F33066700E54A30 /* ViewControllerTaskEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F70A1F33066700E54A30 /* ViewControllerTaskEdit.swift */; };
@@ -38,6 +38,11 @@
 		A48617061F3172AB00A3E0B0 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48617051F3172AB00A3E0B0 /* SQLiteDB.swift */; };
 		A48617091F31733C00A3E0B0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A48617081F31733C00A3E0B0 /* libsqlite3.tbd */; };
 		A486170F1F3173E900A3E0B0 /* TableBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A486170E1F3173E900A3E0B0 /* TableBase.swift */; };
+		A4C228D11F33158A0062EA61 /* TableViewCellTaskMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C228D01F33158A0062EA61 /* TableViewCellTaskMain.swift */; };
+		A4C228D31F3315980062EA61 /* TableViewCellTaskTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C228D21F3315980062EA61 /* TableViewCellTaskTime.swift */; };
+		A4C228D51F3315A50062EA61 /* TableViewCellTaskSub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C228D41F3315A50062EA61 /* TableViewCellTaskSub.swift */; };
+		A4C228D71F3315B10062EA61 /* TableViewCellTaskNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C228D61F3315B10062EA61 /* TableViewCellTaskNote.swift */; };
+		A4C228DB1F3352160062EA61 /* ViewControllerPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C228DA1F3352160062EA61 /* ViewControllerPalette.swift */; };
 		A4C9395F1F3174A90079189D /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C9395E1F3174A90079189D /* DBHelper.swift */; };
 		A4F299261F31714C00A6E587 /* ToolFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F299251F31714C00A6E587 /* ToolFunction.swift */; };
 /* End PBXBuildFile section */
@@ -47,7 +52,7 @@
 		A413F6FE1F32AE3D00E54A30 /* TableViewCellTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellTask.swift; sourceTree = "<group>"; };
 		A413F7001F32B38400E54A30 /* VKCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKCheckbox.swift; sourceTree = "<group>"; };
 		A413F7021F32D97C00E54A30 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		A413F7041F32F95E00E54A30 /* VieControllerPopMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VieControllerPopMenu.swift; sourceTree = "<group>"; };
+		A413F7041F32F95E00E54A30 /* ViewControllerPopMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPopMenu.swift; sourceTree = "<group>"; };
 		A413F7061F32F98700E54A30 /* TableViewCellMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellMenu.swift; sourceTree = "<group>"; };
 		A413F7081F33065C00E54A30 /* ViewControllerTaskAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTaskAdd.swift; sourceTree = "<group>"; };
 		A413F70A1F33066700E54A30 /* ViewControllerTaskEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTaskEdit.swift; sourceTree = "<group>"; };
@@ -81,6 +86,11 @@
 		A48617081F31733C00A3E0B0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		A486170B1F3173A300A3E0B0 /* XyTodo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XyTodo-Bridging-Header.h"; sourceTree = "<group>"; };
 		A486170E1F3173E900A3E0B0 /* TableBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableBase.swift; sourceTree = "<group>"; };
+		A4C228D01F33158A0062EA61 /* TableViewCellTaskMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellTaskMain.swift; sourceTree = "<group>"; };
+		A4C228D21F3315980062EA61 /* TableViewCellTaskTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellTaskTime.swift; sourceTree = "<group>"; };
+		A4C228D41F3315A50062EA61 /* TableViewCellTaskSub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellTaskSub.swift; sourceTree = "<group>"; };
+		A4C228D61F3315B10062EA61 /* TableViewCellTaskNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellTaskNote.swift; sourceTree = "<group>"; };
+		A4C228DA1F3352160062EA61 /* ViewControllerPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPalette.swift; sourceTree = "<group>"; };
 		A4C9395E1F3174A90079189D /* DBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		A4F299251F31714C00A6E587 /* ToolFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,13 +172,18 @@
 		A40F209B1F3170970071AB8D /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				A413F7041F32F95E00E54A30 /* VieControllerPopMenu.swift */,
+				A413F7041F32F95E00E54A30 /* ViewControllerPopMenu.swift */,
+				A4C228DA1F3352160062EA61 /* ViewControllerPalette.swift */,
 				A44BCE281F31D3770087479F /* TableViewCellColumn.swift */,
 				A44BCE2A1F31D4970087479F /* TableViewCellTextview.swift */,
 				A413F6FE1F32AE3D00E54A30 /* TableViewCellTask.swift */,
 				A413F7061F32F98700E54A30 /* TableViewCellMenu.swift */,
 				A413F7001F32B38400E54A30 /* VKCheckbox.swift */,
 				A413F7021F32D97C00E54A30 /* CardView.swift */,
+				A4C228D01F33158A0062EA61 /* TableViewCellTaskMain.swift */,
+				A4C228D21F3315980062EA61 /* TableViewCellTaskTime.swift */,
+				A4C228D41F3315A50062EA61 /* TableViewCellTaskSub.swift */,
+				A4C228D61F3315B10062EA61 /* TableViewCellTaskNote.swift */,
 			);
 			name = Component;
 			sourceTree = "<group>";
@@ -320,16 +335,21 @@
 				A413F7071F32F98700E54A30 /* TableViewCellMenu.swift in Sources */,
 				A44BCE291F31D3770087479F /* TableViewCellColumn.swift in Sources */,
 				A4F299261F31714C00A6E587 /* ToolFunction.swift in Sources */,
+				A4C228D11F33158A0062EA61 /* TableViewCellTaskMain.swift in Sources */,
+				A4C228DB1F3352160062EA61 /* ViewControllerPalette.swift in Sources */,
 				A42DCEC11F316E8D006A987F /* AppDelegate.swift in Sources */,
 				A42DCED31F316EE4006A987F /* ViewControllerMain.swift in Sources */,
+				A4C228D51F3315A50062EA61 /* TableViewCellTaskSub.swift in Sources */,
 				A413F7011F32B38400E54A30 /* VKCheckbox.swift in Sources */,
+				A4C228D71F3315B10062EA61 /* TableViewCellTaskNote.swift in Sources */,
 				A431F8FB1F31741200C140DB /* TableTask.swift in Sources */,
-				A413F7051F32F95E00E54A30 /* VieControllerPopMenu.swift in Sources */,
+				A413F7051F32F95E00E54A30 /* ViewControllerPopMenu.swift in Sources */,
 				A486170F1F3173E900A3E0B0 /* TableBase.swift in Sources */,
 				A413F70B1F33066700E54A30 /* ViewControllerTaskEdit.swift in Sources */,
 				A44BCE271F31D3190087479F /* ViewControllerAbout.swift in Sources */,
 				A44BCE261F31D3190087479F /* ViewControllerContactUs.swift in Sources */,
 				A44BCE231F31D3190087479F /* ViewControllerMenu.swift in Sources */,
+				A4C228D31F3315980062EA61 /* TableViewCellTaskTime.swift in Sources */,
 				A4C9395F1F3174A90079189D /* DBHelper.swift in Sources */,
 				A44BCE2B1F31D4970087479F /* TableViewCellTextview.swift in Sources */,
 				A413F7091F33065C00E54A30 /* ViewControllerTaskAdd.swift in Sources */,
