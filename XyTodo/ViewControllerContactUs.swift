@@ -30,7 +30,7 @@ class ViewControllerContactUs: UITableViewController
     }
     
     //监听返回按钮
-    @IBAction func backAction(_ sender: Any) 
+    @IBAction func actionBack(_ sender: Any)
     {
         _ = self.navigationController?.popViewController(animated: true)
         //self.dismissViewControllerAnimated(true, completion: nil)

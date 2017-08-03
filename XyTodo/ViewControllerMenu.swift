@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewControllerMenu: UITableViewController
+class ViewControllerMenu: UITableViewController, ProtocolHomeChange
 {
+    var delegate: ProtocolHomeChange?
     
     override func viewDidLoad()
     {
@@ -17,7 +18,11 @@ class ViewControllerMenu: UITableViewController
         self.navigationItem.title = NSLocalizedString("button_menu",comment: "")
     }
     
-    @IBAction func backAction(_ sender : Any)
+    func updateHome() {
+        delegate?.updateHome()
+    }
+    
+    @IBAction func actionBack(_ sender : Any)
     {
         _ = self.navigationController?.popViewController(animated: true)
         //self.dismissViewControllerAnimated(true, completion: nil)
@@ -28,7 +33,7 @@ class ViewControllerMenu: UITableViewController
         if segue.identifier == "showSetting"
         {
             let tempVC = segue.destination as! ViewControllerSetting
-            //tempVC.delegate = self
+            tempVC.delegate = self
         }
     }
     

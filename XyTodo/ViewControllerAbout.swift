@@ -43,13 +43,13 @@ class ViewControllerAbout: UIViewController
 //        self.navigationController?.toolbar.tintColor = PURE_NORMAL_GREEN
 //    }
     //监听返回动作
-    @IBAction func backAction(_ sender : Any)
+    @IBAction func actionBack(_ sender : Any)
     {
         _ = self.navigationController?.popViewController(animated: true)
         //self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func urlAction(_ sender: Any) 
+    @IBAction func actionUrl(_ sender: Any)
     {
         let url:URL = URL(string:NSLocalizedString("about_website",comment: ""))!
         UIApplication.shared.open(url, options: [:], completionHandler:{ (b) in})

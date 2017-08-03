@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A40F209F1F3171060071AB8D /* ToolConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40F209E1F3171060071AB8D /* ToolConstant.swift */; };
+		A413F6FF1F32AE3D00E54A30 /* TableViewCellTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F6FE1F32AE3D00E54A30 /* TableViewCellTask.swift */; };
+		A413F7011F32B38400E54A30 /* VKCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F7001F32B38400E54A30 /* VKCheckbox.swift */; };
+		A413F7031F32D97C00E54A30 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F7021F32D97C00E54A30 /* CardView.swift */; };
+		A413F7051F32F95E00E54A30 /* VieControllerPopMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F7041F32F95E00E54A30 /* VieControllerPopMenu.swift */; };
+		A413F7071F32F98700E54A30 /* TableViewCellMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F7061F32F98700E54A30 /* TableViewCellMenu.swift */; };
 		A41B1A7A1F3172210055B783 /* ModelTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41B1A791F3172210055B783 /* ModelTask.swift */; };
 		A42CD3821F31752C005EFC16 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42CD3811F31752C005EFC16 /* DBManager.swift */; };
 		A42CD3841F31958A005EFC16 /* ModelTaskSub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42CD3831F31958A005EFC16 /* ModelTaskSub.swift */; };
@@ -36,6 +41,11 @@
 
 /* Begin PBXFileReference section */
 		A40F209E1F3171060071AB8D /* ToolConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolConstant.swift; sourceTree = "<group>"; };
+		A413F6FE1F32AE3D00E54A30 /* TableViewCellTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellTask.swift; sourceTree = "<group>"; };
+		A413F7001F32B38400E54A30 /* VKCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKCheckbox.swift; sourceTree = "<group>"; };
+		A413F7021F32D97C00E54A30 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		A413F7041F32F95E00E54A30 /* VieControllerPopMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VieControllerPopMenu.swift; sourceTree = "<group>"; };
+		A413F7061F32F98700E54A30 /* TableViewCellMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellMenu.swift; sourceTree = "<group>"; };
 		A41B1A791F3172210055B783 /* ModelTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTask.swift; sourceTree = "<group>"; };
 		A42CD3811F31752C005EFC16 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		A42CD3831F31958A005EFC16 /* ModelTaskSub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTaskSub.swift; sourceTree = "<group>"; };
@@ -146,8 +156,13 @@
 		A40F209B1F3170970071AB8D /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				A413F7041F32F95E00E54A30 /* VieControllerPopMenu.swift */,
 				A44BCE281F31D3770087479F /* TableViewCellColumn.swift */,
 				A44BCE2A1F31D4970087479F /* TableViewCellTextview.swift */,
+				A413F6FE1F32AE3D00E54A30 /* TableViewCellTask.swift */,
+				A413F7061F32F98700E54A30 /* TableViewCellMenu.swift */,
+				A413F7001F32B38400E54A30 /* VKCheckbox.swift */,
+				A413F7021F32D97C00E54A30 /* CardView.swift */,
 			);
 			name = Component;
 			sourceTree = "<group>";
@@ -293,11 +308,14 @@
 				A41B1A7A1F3172210055B783 /* ModelTask.swift in Sources */,
 				A44BCE251F31D3190087479F /* ViewControllerGuide.swift in Sources */,
 				A40F209F1F3171060071AB8D /* ToolConstant.swift in Sources */,
+				A413F7071F32F98700E54A30 /* TableViewCellMenu.swift in Sources */,
 				A44BCE291F31D3770087479F /* TableViewCellColumn.swift in Sources */,
 				A4F299261F31714C00A6E587 /* ToolFunction.swift in Sources */,
 				A42DCEC11F316E8D006A987F /* AppDelegate.swift in Sources */,
 				A42DCED31F316EE4006A987F /* ViewControllerMain.swift in Sources */,
+				A413F7011F32B38400E54A30 /* VKCheckbox.swift in Sources */,
 				A431F8FB1F31741200C140DB /* TableTask.swift in Sources */,
+				A413F7051F32F95E00E54A30 /* VieControllerPopMenu.swift in Sources */,
 				A486170F1F3173E900A3E0B0 /* TableBase.swift in Sources */,
 				A44BCE271F31D3190087479F /* ViewControllerAbout.swift in Sources */,
 				A44BCE261F31D3190087479F /* ViewControllerContactUs.swift in Sources */,
@@ -307,8 +325,10 @@
 				A4842DDC1F3171D600F46C22 /* ModelBase.swift in Sources */,
 				A48617061F3172AB00A3E0B0 /* SQLiteDB.swift in Sources */,
 				A44BCE241F31D3190087479F /* ViewControllerSetting.swift in Sources */,
+				A413F7031F32D97C00E54A30 /* CardView.swift in Sources */,
 				A42CD3821F31752C005EFC16 /* DBManager.swift in Sources */,
 				A42CD3841F31958A005EFC16 /* ModelTaskSub.swift in Sources */,
+				A413F6FF1F32AE3D00E54A30 /* TableViewCellTask.swift in Sources */,
 				A42CD3861F31A11B005EFC16 /* TableTaslSub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

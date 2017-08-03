@@ -45,7 +45,7 @@
                                 <rect key="frame" x="164" y="345" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="urlAction:" destination="Mlg-am-Rcp" eventType="touchUpInside" id="Ajg-yn-Jor"/>
+                                    <action selector="actionUrl:" destination="Mlg-am-Rcp" eventType="touchUpInside" id="gP6-z4-rci"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="XyTodo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEG-3z-735">
@@ -72,7 +72,7 @@
                     <toolbarItems>
                         <barButtonItem image="ic_navigation_arrow_back_black_24dp" width="50" id="N8M-5v-9uT">
                             <connections>
-                                <action selector="backAction:" destination="Mlg-am-Rcp" id="V1P-tK-wsg"/>
+                                <action selector="actionBack:" destination="Mlg-am-Rcp" id="OGd-q4-IsA"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="20" id="Ppk-hz-akp"/>
@@ -134,7 +134,7 @@
                     <toolbarItems>
                         <barButtonItem image="ic_navigation_arrow_back_black_24dp" width="50" id="VfB-U9-Sir">
                             <connections>
-                                <action selector="backAction:" destination="nPb-l8-WFQ" id="nG5-sn-w0s"/>
+                                <action selector="actionBack:" destination="nPb-l8-WFQ" id="mjD-8r-60C"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="20" id="ves-2j-eCa"/>
@@ -190,7 +190,7 @@
                     <toolbarItems>
                         <barButtonItem image="ic_navigation_arrow_back_black_24dp" width="50" id="SrT-OK-5kZ">
                             <connections>
-                                <action selector="backAction:" destination="6iG-01-MWl" id="UK2-yj-tAc"/>
+                                <action selector="actionBack:" destination="6iG-01-MWl" id="XBq-RY-EQj"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="20" id="blm-4w-nw2"/>
@@ -315,7 +315,7 @@
                     <toolbarItems>
                         <barButtonItem image="ic_navigation_arrow_back_black_24dp" width="50" id="Qws-B9-rc8">
                             <connections>
-                                <action selector="backAction:" destination="8ft-vL-rUf" id="gSm-lA-teJ"/>
+                                <action selector="actionBack:" destination="8ft-vL-rUf" id="odH-Hd-1RO"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="20" id="dc1-NJ-wuF"/>
@@ -379,7 +379,7 @@
                     <toolbarItems>
                         <barButtonItem image="ic_navigation_arrow_back_black_24dp" width="50" id="SAH-8r-bEo">
                             <connections>
-                                <action selector="backAction:" destination="zac-5X-qGh" id="CFQ-lW-XZJ"/>
+                                <action selector="actionBack:" destination="zac-5X-qGh" id="b83-Ea-rR4"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="20" id="pIN-7b-q8C"/>
@@ -394,18 +394,70 @@
         <scene sceneID="qN5-f7-M2K">
             <objects>
                 <tableViewController id="tQr-V6-rUy" customClass="ViewControllerMain" customModule="XyTodo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hDf-QM-UEs">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" id="hDf-QM-UEs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="N5w-6O-cpk">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellTask" rowHeight="64" id="N5w-6O-cpk" customClass="TableViewCellTask" customModule="XyTodo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N5w-6O-cpk" id="KLI-o0-LV6">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXa-Ol-djI" customClass="CardView" customModule="XyTodo" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="4" width="359" height="56"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ukm-OO-bmd">
+                                                    <rect key="frame" x="56" y="8" width="303" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bd-qM-fxb">
+                                                    <rect key="frame" x="56" y="30" width="303" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3I-fP-3e5" customClass="VKCheckbox" customModule="XyTodo" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="16" width="24" height="24"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="9EF-We-MJU"/>
+                                                        <constraint firstAttribute="height" constant="24" id="bSm-QT-sS5"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="8Bd-qM-fxb" secondAttribute="trailing" id="5nE-eF-iXf"/>
+                                                <constraint firstItem="8Bd-qM-fxb" firstAttribute="top" secondItem="Ukm-OO-bmd" secondAttribute="bottom" constant="2" id="AUG-KU-pqE"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ukm-OO-bmd" secondAttribute="trailing" id="Kzf-IE-Jgv"/>
+                                                <constraint firstAttribute="bottom" secondItem="8Bd-qM-fxb" secondAttribute="bottom" constant="8" id="M3n-FO-rdf"/>
+                                                <constraint firstItem="Q3I-fP-3e5" firstAttribute="top" secondItem="qXa-Ol-djI" secondAttribute="top" constant="16" id="dDu-2P-XU3"/>
+                                                <constraint firstItem="8Bd-qM-fxb" firstAttribute="leading" secondItem="Q3I-fP-3e5" secondAttribute="trailing" constant="16" id="jOd-OS-bEj"/>
+                                                <constraint firstItem="Ukm-OO-bmd" firstAttribute="top" secondItem="qXa-Ol-djI" secondAttribute="top" constant="8" id="ln3-2m-itc"/>
+                                                <constraint firstItem="Ukm-OO-bmd" firstAttribute="leading" secondItem="Q3I-fP-3e5" secondAttribute="trailing" constant="16" id="oRO-do-zgb"/>
+                                                <constraint firstItem="Q3I-fP-3e5" firstAttribute="leading" secondItem="qXa-Ol-djI" secondAttribute="leading" constant="16" id="wso-et-rqI"/>
+                                                <constraint firstAttribute="bottom" secondItem="Q3I-fP-3e5" secondAttribute="bottom" constant="16" id="zdm-EF-la0"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="qXa-Ol-djI" secondAttribute="bottom" constant="4" id="D4g-rr-fUe"/>
+                                        <constraint firstItem="qXa-Ol-djI" firstAttribute="leading" secondItem="KLI-o0-LV6" secondAttribute="leading" constant="8" id="F7m-iY-dsb"/>
+                                        <constraint firstAttribute="trailing" secondItem="qXa-Ol-djI" secondAttribute="trailing" constant="8" id="Wa8-OB-yNc"/>
+                                        <constraint firstItem="qXa-Ol-djI" firstAttribute="top" secondItem="KLI-o0-LV6" secondAttribute="top" constant="4" id="guw-5u-Gx3"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cbTag" destination="Q3I-fP-3e5" id="9Yu-hF-rGD"/>
+                                    <outlet property="lbContent" destination="Ukm-OO-bmd" id="rzt-cc-Fl9"/>
+                                    <outlet property="lbTime" destination="8Bd-qM-fxb" id="SUR-6d-hhl"/>
+                                    <outlet property="vCard" destination="qXa-Ol-djI" id="xmF-ZY-2Ma"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -413,15 +465,29 @@
                             <outlet property="delegate" destination="tQr-V6-rUy" id="WmM-ir-juk"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem image="ic_content_add_black_24dp" width="50" id="mkg-dl-Fvg"/>
+                        <barButtonItem image="ic_action_list_black_24dp" width="50" id="QNa-lc-fSw">
+                            <connections>
+                                <action selector="actionFilter:" destination="tQr-V6-rUy" id="Eeo-XW-fK9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem image="ic_content_sort_black_24dp" width="50" id="GFN-Pv-OxK">
+                            <connections>
+                                <action selector="actionSort:" destination="tQr-V6-rUy" id="l02-Rm-80a"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="20" id="oYl-db-YzJ"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="XyTodo" id="9Y5-z3-BBx">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="x5M-gE-YTY">
                             <connections>
-                                <segue destination="8ft-vL-rUf" kind="show" id="cq9-Ej-2tb"/>
+                                <segue destination="8ft-vL-rUf" kind="show" identifier="showMenu" id="cq9-Ej-2tb"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="BDa-P4-dvg">
                             <connections>
-                                <action selector="addAction:" destination="tQr-V6-rUy" id="0NN-Br-ceB"/>
+                                <action selector="actionAdd:" destination="tQr-V6-rUy" id="sQi-n8-noH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -458,9 +524,56 @@
             </objects>
             <point key="canvasLocation" x="257" y="161"/>
         </scene>
+        <!--View Controller Pop Menu-->
+        <scene sceneID="ndN-6g-4vv">
+            <objects>
+                <tableViewController storyboardIdentifier="ViewControllerPopMenu" modalPresentationStyle="currentContext" id="gjJ-YX-BL5" customClass="ViewControllerPopMenu" customModule="XyTodo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="AuY-md-EFZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellMenu" id="wqr-Cd-bTe" customClass="TableViewCellMenu" customModule="XyTodo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wqr-Cd-bTe" id="Hem-rq-brF">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83j-3m-UAo">
+                                            <rect key="frame" x="16" y="11.5" width="343" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="83j-3m-UAo" firstAttribute="centerY" secondItem="Hem-rq-brF" secondAttribute="centerY" id="CwR-gL-y6u"/>
+                                        <constraint firstItem="83j-3m-UAo" firstAttribute="trailing" secondItem="Hem-rq-brF" secondAttribute="trailingMargin" constant="-8" id="DJC-KI-GTa"/>
+                                        <constraint firstItem="83j-3m-UAo" firstAttribute="leading" secondItem="Hem-rq-brF" secondAttribute="leadingMargin" constant="8" id="g1c-WN-sVi"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lbTitle" destination="83j-3m-UAo" id="tMe-TU-SW5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gjJ-YX-BL5" id="gb0-S1-FvI"/>
+                            <outlet property="delegate" destination="gjJ-YX-BL5" id="Qb6-Di-vYo"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S0N-5n-GJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="257" y="-509"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="ic_action_list_black_24dp" width="24" height="24"/>
         <image name="ic_action_settings_black_24dp.png" width="16" height="16"/>
+        <image name="ic_content_add_black_24dp" width="24" height="24"/>
+        <image name="ic_content_sort_black_24dp" width="24" height="24"/>
         <image name="ic_launcher" width="1024" height="1024"/>
         <image name="ic_maps_local_offer_black_24dp.png" width="16" height="16"/>
         <image name="ic_maps_navigation_black_24dp.png" width="16" height="16"/>

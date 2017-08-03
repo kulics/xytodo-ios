@@ -10,6 +10,7 @@ import UIKit
 
 class ViewControllerSetting: UITableViewController
 {
+    var delegate: ProtocolHomeChange?
     
     var mApp: AppDelegate!
     
@@ -25,7 +26,7 @@ class ViewControllerSetting: UITableViewController
         self.tableView.rowHeight = UITableViewAutomaticDimension
     }
     
-    @IBAction func backAction(_ sender : Any)
+    @IBAction func actionBack(_ sender : Any)
     {
         _ = self.navigationController?.popViewController(animated: true)
         //self.dismissViewControllerAnimated(true, completion: nil)
@@ -95,6 +96,7 @@ class ViewControllerSetting: UITableViewController
                 { 
                     (action) -> Void in
                     self.mApp.DBMGet().DBClear()
+                    self.delegate?.updateHome()
                     // 没有错误消息抛出
 //                    self.delegate?.changeKey()
                     _ = self.navigationController?.popViewController(animated: true)
