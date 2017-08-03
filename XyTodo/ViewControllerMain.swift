@@ -116,6 +116,37 @@ class ViewControllerMain: UITableViewController, UIPopoverPresentationController
         }
         return cell
     }
+    //设置隔栏颜色
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
+    {
+        view.tintColor = PURE_BLACK_300
+        let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.white
+    }
+    //设置分栏标题
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    {
+        var title = ""
+        switch mFilter {
+            case "today":
+                title = NSLocalizedString("today", comment: "")
+            case "all":
+                title = NSLocalizedString("all",comment: "")
+            case "todo":
+                title = NSLocalizedString("todo",comment: "")
+            case "done":
+                title = NSLocalizedString("done",comment: "")
+            default:
+                break
+        }
+        title = title + "  ·  " + countGet()
+        return title
+    }
+    //动态调整分栏间距
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
+    {
+        return CGFloat(30)
+    }
     //列表点击方法
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
@@ -253,6 +284,18 @@ class ViewControllerMain: UITableViewController, UIPopoverPresentationController
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle
     {
         return UIModalPresentationStyle.none
+    }
+    
+    func countGet() -> String {
+        var iCheckNum = 0;
+        for item in mDataset
+        {
+            if (item.status == 1)
+            {
+                iCheckNum = iCheckNum + 1;
+            }
+        }
+        return String(iCheckNum) + "/" + String(mDataset.count)
     }
 }
 
