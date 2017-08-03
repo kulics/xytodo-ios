@@ -1,11 +1,3 @@
-//
-//  ViewControllerGuide.swift
-//  XyKey
-//
-//  Created by 吴森 on 15/7/16.
-//  Copyright (c) 2015年 naxy. All rights reserved.
-//
-
 import UIKit
 //指南页面
 class ViewControllerGuide: UITableViewController 

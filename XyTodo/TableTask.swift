@@ -1,5 +1,5 @@
 import Foundation
-//钥匙
+//任务
 class TableTask: TableBase
 {
     //表格名称

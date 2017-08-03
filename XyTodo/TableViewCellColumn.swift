@@ -1,11 +1,3 @@
-//
-//  TableViewCellColumn.swift
-//  XyKey
-//
-//  Created by 吴森 on 15/11/22.
-//  Copyright © 2015年 naxy. All rights reserved.
-//
-
 import UIKit
 
 class TableViewCellColumn: UITableViewCell 

@@ -1,11 +1,3 @@
-//
-//  CardView.swift
-//  XyTodo
-//
-//  Created by Kulics on 2017/8/3.
-//  Copyright © 2017年 Naxy. All rights reserved.
-//
-
 import UIKit
 //自定义卡片控件，用来承担背景
 class CardView: UIControl

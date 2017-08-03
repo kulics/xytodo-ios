@@ -13,6 +13,9 @@
 		A413F7031F32D97C00E54A30 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F7021F32D97C00E54A30 /* CardView.swift */; };
 		A413F7051F32F95E00E54A30 /* VieControllerPopMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F7041F32F95E00E54A30 /* VieControllerPopMenu.swift */; };
 		A413F7071F32F98700E54A30 /* TableViewCellMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F7061F32F98700E54A30 /* TableViewCellMenu.swift */; };
+		A413F7091F33065C00E54A30 /* ViewControllerTaskAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F7081F33065C00E54A30 /* ViewControllerTaskAdd.swift */; };
+		A413F70B1F33066700E54A30 /* ViewControllerTaskEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F70A1F33066700E54A30 /* ViewControllerTaskEdit.swift */; };
+		A413F70D1F33067200E54A30 /* ViewControllerNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413F70C1F33067200E54A30 /* ViewControllerNote.swift */; };
 		A41B1A7A1F3172210055B783 /* ModelTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41B1A791F3172210055B783 /* ModelTask.swift */; };
 		A42CD3821F31752C005EFC16 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42CD3811F31752C005EFC16 /* DBManager.swift */; };
 		A42CD3841F31958A005EFC16 /* ModelTaskSub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42CD3831F31958A005EFC16 /* ModelTaskSub.swift */; };
@@ -46,6 +49,9 @@
 		A413F7021F32D97C00E54A30 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A413F7041F32F95E00E54A30 /* VieControllerPopMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VieControllerPopMenu.swift; sourceTree = "<group>"; };
 		A413F7061F32F98700E54A30 /* TableViewCellMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellMenu.swift; sourceTree = "<group>"; };
+		A413F7081F33065C00E54A30 /* ViewControllerTaskAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTaskAdd.swift; sourceTree = "<group>"; };
+		A413F70A1F33066700E54A30 /* ViewControllerTaskEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTaskEdit.swift; sourceTree = "<group>"; };
+		A413F70C1F33067200E54A30 /* ViewControllerNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerNote.swift; sourceTree = "<group>"; };
 		A41B1A791F3172210055B783 /* ModelTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTask.swift; sourceTree = "<group>"; };
 		A42CD3811F31752C005EFC16 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		A42CD3831F31958A005EFC16 /* ModelTaskSub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTaskSub.swift; sourceTree = "<group>"; };
@@ -176,6 +182,9 @@
 				A44BCE211F31D3190087479F /* ViewControllerContactUs.swift */,
 				A44BCE221F31D3190087479F /* ViewControllerAbout.swift */,
 				A42DCED21F316EE4006A987F /* ViewControllerMain.swift */,
+				A413F7081F33065C00E54A30 /* ViewControllerTaskAdd.swift */,
+				A413F70A1F33066700E54A30 /* ViewControllerTaskEdit.swift */,
+				A413F70C1F33067200E54A30 /* ViewControllerNote.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -317,12 +326,15 @@
 				A431F8FB1F31741200C140DB /* TableTask.swift in Sources */,
 				A413F7051F32F95E00E54A30 /* VieControllerPopMenu.swift in Sources */,
 				A486170F1F3173E900A3E0B0 /* TableBase.swift in Sources */,
+				A413F70B1F33066700E54A30 /* ViewControllerTaskEdit.swift in Sources */,
 				A44BCE271F31D3190087479F /* ViewControllerAbout.swift in Sources */,
 				A44BCE261F31D3190087479F /* ViewControllerContactUs.swift in Sources */,
 				A44BCE231F31D3190087479F /* ViewControllerMenu.swift in Sources */,
 				A4C9395F1F3174A90079189D /* DBHelper.swift in Sources */,
 				A44BCE2B1F31D4970087479F /* TableViewCellTextview.swift in Sources */,
+				A413F7091F33065C00E54A30 /* ViewControllerTaskAdd.swift in Sources */,
 				A4842DDC1F3171D600F46C22 /* ModelBase.swift in Sources */,
+				A413F70D1F33067200E54A30 /* ViewControllerNote.swift in Sources */,
 				A48617061F3172AB00A3E0B0 /* SQLiteDB.swift in Sources */,
 				A44BCE241F31D3190087479F /* ViewControllerSetting.swift in Sources */,
 				A413F7031F32D97C00E54A30 /* CardView.swift in Sources */,

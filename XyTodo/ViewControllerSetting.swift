@@ -1,11 +1,3 @@
-//
-//  ViewControllerSetting.swift
-//  XyKey
-//
-//  Created by 吴森 on 15/7/16.
-//  Copyright (c) 2015年 naxy. All rights reserved.
-//
-
 import UIKit
 
 class ViewControllerSetting: UITableViewController
