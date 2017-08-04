@@ -138,10 +138,13 @@ class ViewControllerMain: UITableViewController, UIPopoverPresentationController
         cell.vCard.addAction(handler:
         {
             () in
-            tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
-            //使用segue跳转
-            self.performSegue(withIdentifier: "showTaskEdit", sender: self)
-            tableView.deselectRow(at: indexPath, animated: false)
+            if tableView.isEditing == false
+            {
+                tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+                //使用segue跳转
+                self.performSegue(withIdentifier: "showTaskEdit", sender: self)
+                tableView.deselectRow(at: indexPath, animated: false)
+            }
         })
         return cell
     }
