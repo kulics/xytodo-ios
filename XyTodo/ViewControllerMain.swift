@@ -20,7 +20,6 @@ class ViewControllerMain: UITableViewController, UIPopoverPresentationController
         //获取本地数据
         mApp = UIApplication.shared.delegate as? AppDelegate
         
-        
         self.navigationItem.title = NSLocalizedString("page_title_main",comment: "")
         mActionButton.title = NSLocalizedString("button_add",comment: "")
         mMenuButton.title = NSLocalizedString("button_menu",comment: "")
@@ -36,7 +35,26 @@ class ViewControllerMain: UITableViewController, UIPopoverPresentationController
     //设置数据
     func setDataset()
     {
-        mDataset = mApp.DBMGet().TaskGetAll(param: mFilter)
+        //清空数据
+        mDataset = []
+        let dataset = mApp.DBMGet().TaskGetAll(param: mFilter)
+        if mFilter == "today"
+        {
+            //遍历添加进数据集
+            for v in dataset
+            {
+                if ToolFunction.ComputeDateToday(time: v.timeTarget)
+                {
+                    mDataset.append(v)
+                }
+            }
+        }
+        else
+        {
+            //添加进数据集
+            mDataset = dataset
+        }
+        
         tableView.reloadData()
     }
     //刷新数据
@@ -55,11 +73,11 @@ class ViewControllerMain: UITableViewController, UIPopoverPresentationController
             tempVC.mID = mDataset[(indexPath as NSIndexPath).row].id
             tempVC.delegate = self
         }
-//        if segue.identifier == "showKeyAdd"
-//        {
-//            let tempVC = segue.destination as! ViewControllerKeyAdd
-//            tempVC.delegate = self
-//        }
+        if segue.identifier == "showTaskAdd"
+        {
+            let tempVC = segue.destination as! ViewControllerTaskAdd
+            tempVC.delegate = self
+        }
         if segue.identifier == "showMenu"
         {
             let tempVC = segue.destination as! ViewControllerMenu
@@ -109,7 +127,7 @@ class ViewControllerMain: UITableViewController, UIPopoverPresentationController
             if item.status != b {
                 item.status = b
                 //获取时间
-                let time = Int(NSDate().timeIntervalSince1970)
+                let time = Int(Date().timeIntervalSince1970)
                 item.timeDone = time
                 self.mApp.DBMGet().TaskCheck(model: item)
                 tableView.reloadRows(at: [indexPath], with: .automatic)
@@ -117,12 +135,14 @@ class ViewControllerMain: UITableViewController, UIPopoverPresentationController
             }
         })
         //背景设置点击监听
-        cell.vCard.ClickBlock = { () in
+        cell.vCard.addAction(handler:
+        {
+            () in
             tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
             //使用segue跳转
             self.performSegue(withIdentifier: "showTaskEdit", sender: self)
             tableView.deselectRow(at: indexPath, animated: false)
-        }
+        })
         return cell
     }
     //设置隔栏颜色
@@ -222,8 +242,12 @@ class ViewControllerMain: UITableViewController, UIPopoverPresentationController
                 model.content = text!
                 model.note = ""
                 model.color = "blue"
+                //从设置中获取最后使用的颜色
+                if let last = UserDefaults.standard.value(forKey: "color_last") as? String {
+                    model.color = last
+                }
                 //获取时间
-                let time = Int(NSDate().timeIntervalSince1970)
+                let time = Int(Date().timeIntervalSince1970)
                 model.timeCreate = time
                 model.timeTarget = model.timeCreate
                 model.timeDone = 0
@@ -245,6 +269,12 @@ class ViewControllerMain: UITableViewController, UIPopoverPresentationController
         alert.addAction(negativeAction)
         //弹起
         self.present( alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func actionAddDetail(_ sender: Any)
+    {
+        //使用segue跳转
+        self.performSegue(withIdentifier: "showTaskAdd", sender: self)
     }
     
     @IBAction func actionFilter(_ sender: Any)

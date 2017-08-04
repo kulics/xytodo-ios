@@ -4,6 +4,7 @@ class TableViewCellTaskNote: UITableViewCell
 {
 
     @IBOutlet weak var lbContent: UILabel!
+    @IBOutlet weak var vCard: CardView!
     
     override func awakeFromNib()
     {

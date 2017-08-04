@@ -50,7 +50,7 @@ class ViewControllerPalette: UIViewController
     
     var mColor:String = "blue"
     
-    var actionPositive : ((String)->Void)?
+    private var actionPositive : ((String)->Void)?
     
     let alertViewGrayColor = UIColor(red: 224.0/255.0, green: 224.0/255.0, blue: 224.0/255.0, alpha: 1)
     

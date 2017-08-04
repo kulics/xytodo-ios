@@ -2,7 +2,10 @@ import UIKit
 //自定义卡片控件，用来承担背景
 class CardView: UIControl
 {
-    var ClickBlock: (()->Void)?
+    private var ClickBlock: (()->Void)?
+    func addAction(handler: @escaping () -> Void) {
+        ClickBlock = handler
+    }
     
     override init(frame: CGRect)
     {

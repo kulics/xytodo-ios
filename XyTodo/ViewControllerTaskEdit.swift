@@ -20,13 +20,18 @@ class ViewControllerTaskEdit: UITableViewController, UITextFieldDelegate, UIPopo
         mApp = UIApplication.shared.delegate as? AppDelegate
         mDataTask = mApp.DBMGet().TaskGet(id: mID!)
         mDataTask.sub = mApp.DBMGet().TaskSubGet(id_task: mDataTask.id)
-        for item in mDataTask.sub {
-            if item.status == 1 {
+        for item in mDataTask.sub
+        {
+            if item.status == 1
+            {
                 iCheckNum = iCheckNum + 1
             }
         }
         //隐藏空白项
         self.tableView.tableFooterView = UIView()
+        //设置自适应高度
+        self.tableView.estimatedRowHeight = 64
+        self.tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -43,12 +48,18 @@ class ViewControllerTaskEdit: UITableViewController, UITextFieldDelegate, UIPopo
     //监听跳转
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-//        if segue.identifier == "showGenerate"
-//        {
-//            let tempVC = segue.destination as! ViewControllerGenerate
-//            tempVC.delegate = self
-//            tempVC.mType = generateType
-//        }
+        if segue.identifier == "showNote"
+        {
+            let tempVC = segue.destination as! ViewControllerNote
+            //设置内容和监听
+            tempVC.strContent = mDataTask.note
+            tempVC.addAction(handler:
+            {
+                (note) in
+                self.mDataTask.note = note
+                self.tableView.reloadRows(at: [IndexPath(row: 2, section: 0)], with: .none)
+            })
+        }
     }
     
     //显示条目数
@@ -87,7 +98,7 @@ class ViewControllerTaskEdit: UITableViewController, UITextFieldDelegate, UIPopo
                     if self.mDataTask.status != b {
                         self.mDataTask.status = b
                         //获取时间
-                        let time = Int(NSDate().timeIntervalSince1970)
+                        let time = Int(Date().timeIntervalSince1970)
                         self.mDataTask.timeDone = time
                         self.mApp.DBMGet().TaskCheck(model: self.mDataTask)
                         tableView.reloadRows(at: [indexPath], with: .automatic)
@@ -107,6 +118,12 @@ class ViewControllerTaskEdit: UITableViewController, UITextFieldDelegate, UIPopo
                     str = NSLocalizedString("note",comment: "")
                 }
                 cell.lbContent.text = str
+                cell.vCard.addAction(handler:
+                {
+                    () in
+                    //使用segue跳转
+                    self.performSegue(withIdentifier: "showNote", sender: self)
+                })
                 return cell
             case 3 + mDataTask.sub.count ... 3 + mDataTask.sub.count+4:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "cellNone", for: indexPath)
@@ -284,17 +301,37 @@ class ViewControllerTaskEdit: UITableViewController, UITextFieldDelegate, UIPopo
         {
             (num) in
             //获取时间
-            let time = Int(NSDate().timeIntervalSince1970)
+            let time = Int(Date().timeIntervalSince1970)
             switch num
             {
-                case 0:
+                case 0: //当天
                     self.mDataTask.timeTarget = time
-                case 1:
+                case 1: //明天
                     self.mDataTask.timeTarget = time + 86400
-                case 2:
+                case 2: //下周
                     self.mDataTask.timeTarget = time + 604800
-                case 3:
-                    self.mDataTask.timeTarget = time
+                case 3: //使用选择器自定义
+                    let alert = UIAlertController(title: "\n\n\n\n\n\n\n\n\n\n", message: nil, preferredStyle: .actionSheet)
+                    // 初始化 datePicker
+                    let datePicker = UIDatePicker( )
+                    //设置居中
+                    datePicker.center = CGPoint(x: self.view.center.x, y: datePicker.center.y)
+                    // 设置样式，当前设为日期
+                    datePicker.datePickerMode = .date
+                    // 设置默认时间
+                    datePicker.date = Date()
+                    // 响应事件（只要滚轮变化就会触发）
+                    // datePicker.addTarget(self, action:Selector("datePickerValueChange:"), forControlEvents: UIControlEvents.ValueChanged)
+                    alert.addAction(UIAlertAction(title: NSLocalizedString("button_ok", comment: ""), style: .default)
+                    {
+                        (alertAction) in
+                        self.mDataTask.timeTarget = Int(datePicker.date.timeIntervalSince1970)
+                        self.tableView.reloadRows(at: [IndexPath(row: 1, section: 0)], with: .none)
+                    })
+                    alert.addAction(UIAlertAction(title: NSLocalizedString("button_cancel", comment: ""), style: .cancel, handler:nil))
+                    //添加到弹出框
+                    alert.view.addSubview(datePicker)
+                    self.present(alert, animated: true, completion: nil)
                 default:
                     break
             }

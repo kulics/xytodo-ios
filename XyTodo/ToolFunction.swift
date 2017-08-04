@@ -13,13 +13,19 @@ class ToolFunction
         let fYear = DateFormatter()
         fYear.dateFormat = "yyyy"
         let fDay = DateFormatter()
-        fDay.dateFormat = "dd"
+        fDay.dateFormat = "D"
         
         let dYear = Int(fYear.string(from: dateNow))! - Int(fYear.string(from: dateTarget))!
         let dDay = Int(fDay.string(from: dateNow))! - Int(fDay.string(from: dateTarget))!
         
         let format = DateFormatter()
+        //按格式输出时间
         if dYear > 0 //去年以前
+        {
+            format.dateFormat = "yyyy-MM-dd"
+            date = format.string(from: dateTarget)
+        }
+        else if dYear <= -1//明年以后
         {
             format.dateFormat = "yyyy-MM-dd"
             date = format.string(from: dateTarget)
@@ -44,16 +50,12 @@ class ToolFunction
             format.dateFormat = "  EEE"
             date = NSLocalizedString("tomorrow", comment: "") + format.string(from: dateTarget)
         }
-        else if dYear > -2 //明天以后
+        else //明天以后
         {
             format.dateFormat = "MM-dd  EEE"
             date = format.string(from: dateTarget)
         }
-        else //明年以后
-        {
-            format.dateFormat = "yyyy-MM-dd"
-            date = format.string(from: dateTarget)
-        }
+
         
         return date
     }
