@@ -311,11 +311,12 @@ class ViewControllerTaskEdit: UITableViewController, UITextFieldDelegate, UIPopo
                 case 2: //下周
                     self.mDataTask.timeTarget = time + 604800
                 case 3: //使用选择器自定义
-                    let alert = UIAlertController(title: "\n\n\n\n\n\n\n\n\n\n", message: nil, preferredStyle: .actionSheet)
+                    let alert = UIAlertController(title: "\n\n\n\n\n\n\n\n", message: nil, preferredStyle: .alert)
                     // 初始化 datePicker
                     let datePicker = UIDatePicker( )
+                    datePicker.frame.size = CGSize(width: 270, height: 210)
                     //设置居中
-                    datePicker.center = CGPoint(x: self.view.center.x, y: datePicker.center.y)
+                    //datePicker.center = CGPoint(x: self.view.center.x, y: datePicker.center.y)
                     // 设置样式，当前设为日期
                     datePicker.datePickerMode = .date
                     // 设置默认时间
@@ -331,6 +332,7 @@ class ViewControllerTaskEdit: UITableViewController, UITextFieldDelegate, UIPopo
                     alert.addAction(UIAlertAction(title: NSLocalizedString("button_cancel", comment: ""), style: .cancel, handler:nil))
                     //添加到弹出框
                     alert.view.addSubview(datePicker)
+                    
                     self.present(alert, animated: true, completion: nil)
                 default:
                     break
